@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzeria "da Marcel" | Website</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="menu-close" onclick="animateMenuBars()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <nav class="navigation">
+          <a href="#" class="logo">Pizza Pasta da Marcel</a>
+          <ul>
+            <li><a href="#" onclick="animateMenuBars()">HOME</a></li>
+            <li><a href="#menu" onclick="animateMenuBars()">SPEISEKARTE</a></li>
+            <li>
+              <a href="#opening-hours" onclick="animateMenuBars()"
+                >ÖFFNUNGSZEITEN</a
+              >
+            </li>
+            <li>
+              <a href="#about" onclick="animateMenuBars()"
+                >ÜBER DAS RESTAURANT</a
+              >
+            </li>
+            <li>
+              <a href="#location" onclick="animateMenuBars()">STANDORT</a>
+            </li>
+          </ul>
+          <div></div>
+        </nav>
+        <div class="column title">
+          <h1>PIZZERIA "DA MARCEL"</h1>
+          <hr class="hr1" />
+          <p>
+            Da stecken über 20 Jahre Erfahrung drin, Qualität und ein guter Ruf,
+            das komplette Paket halt. Fragen Sie ihre Nachbarn, ihre Freunde
+            oder probieren Sie es am Besten einfach selbst aus.
+          </p>
+          <button>Jetzt Bestellen!</button>
+        </div>
+        <img id="pizza-img" src="images/pizza.png" alt="pizza.png" />
+      </header>
+      <section id="menu">
+        <h2>SPEISEKARTE</h2>
+        <hr class="hr2" />
+        <img id="salad-img" src="images/salat.png" alt="salat.png" />
+        <div class="column menu-ui">
+          <div class="row tabs">
+            <button onclick="clickTab(this)" class="active" id="tab-salads">
+              Salate
+            </button>
+            <button onclick="clickTab(this)" id="tab-pizzas">Pizzen</button>
+            <button onclick="clickTab(this)" id="tab-noodles">Nudeln</button>
+          </div>
+          <div class="row list" id="list-salads">
+            <ul class="food">
+              <li>Gemischter Salat, klein</li>
+              <li>Gemischter Salat, groß</li>
+              <li>Italienischer Salat</li>
+              <li>Insalata Abruzzi</li>
+            </ul>
+            <ul class="price">
+              <li>3,00€</li>
+              <li>5,00€</li>
+              <li>8,00€</li>
+              <li>7,00€</li>
+            </ul>
+          </div>
+          <div class="row list" id="list-pizzas">
+            <ul class="food">
+              <li>Pizza Magherita</li>
+              <li>Pizza Krabben</li>
+              <li>Pizza Mozzarella Basilikum</li>
+              <li>Pizza Gorgonzola</li>
+              <li>Pizza Salami</li>
+              <li>Pizza Schinken</li>
+              <li>Pizza Sardellen</li>
+              <li>Pizza Zwiebel</li>
+              <li>Pizza Champignons</li>
+              <li>Pizza Peperoni</li>
+              <li>Pizza Artischocken</li>
+              <li>Pizza Mix</li>
+              <li>Pizza "Vier Jahreszeiten"</li>
+              <li>Pizza Diavolo, scharf</li>
+              <li>Pizza Capricciosa</li>
+              <li>Pizza Hawai</li>
+              <li>Pizza Calzone</li>
+              <li>Pizza Quattro Formaggi</li>
+              <li>Pizza Marcel Speziale</li>
+              <li>Pizza Regina</li>
+              <li>Pizza O sole mio</li>
+              <li>Pizza Re</li>
+              <li>Pizza Pasticciata</li>
+              <li>Pizza Vorderschinken, Salami</li>
+              <li>Pizza Salsiccia</li>
+              <li>Pizza Pescatora</li>
+              <li>Pizza Tonno</li>
+              <li>Pizza Hackfleisch</li>
+              <li>Pizza Vegetaria</li>
+              <li>Pizza Spinaci</li>
+              <li>Pizza Broccoli</li>
+              <li>Pizza Parma-Rucola</li>
+            </ul>
+            <ul class="price">
+              <li>3,50€</li>
+              <li>7,00€</li>
+              <li>6,00€</li>
+              <li>6,00€</li>
+              <li>4,00€</li>
+              <li>4,00€</li>
+              <li>5,00€</li>
+              <li>4,00€</li>
+              <li>4,00€</li>
+              <li>4,00€</li>
+              <li>4,00€</li>
+              <li>5,50€</li>
+              <li>6,00€</li>
+              <li>6,00€</li>
+              <li>6,00€</li>
+              <li>5,00€</li>
+              <li>6,00€</li>
+              <li>6,00€</li>
+              <li>6,00€</li>
+              <li>5,00€</li>
+              <li>5,50€</li>
+              <li>5,00€</li>
+              <li>6,00€</li>
+              <li>5,00€</li>
+              <li>6,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>5,00€</li>
+              <li>6,00€</li>
+              <li>5,00€</li>
+              <li>5,00€</li>
+              <li>8,50€</li>
+            </ul>
+            <ul class="price">
+              <li>4,50€</li>
+              <li>8,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>5,00€</li>
+              <li>5,00€</li>
+              <li>6,00€</li>
+              <li>5,00€</li>
+              <li>5,00€</li>
+              <li>5,00€</li>
+              <li>5,00€</li>
+              <li>6,50€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>6,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>6,00€</li>
+              <li>6,50€</li>
+              <li>6,00€</li>
+              <li>7,00€</li>
+              <li>6,00€</li>
+              <li>7,00€</li>
+              <li>8,00€</li>
+              <li>8,00€</li>
+              <li>6,00€</li>
+              <li>7,00€</li>
+              <li>6,00€</li>
+              <li>6,00€</li>
+              <li>9,50€</li>
+            </ul>
+            <ul class="price">
+              <li>10,00€</li>
+              <li>17,00€</li>
+              <li>16,00€</li>
+              <li>16,00€</li>
+              <li>12,00€</li>
+              <li>12,00€</li>
+              <li>14,00€</li>
+              <li>12,00€</li>
+              <li>12,00€</li>
+              <li>12,00€</li>
+              <li>12,00€</li>
+              <li>12,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+            </ul>
+          </div>
+          <div class="row list" id="list-noodles">
+            <ul class="food">
+              <li>Spaghetti Napoli</li>
+              <li>Spaghetti Bolognese</li>
+              <li>Rigatoni Napoli</li>
+              <li>Rigatoni Bolognese</li>
+              <li>Rigatoni Pasticciati</li>
+              <li>Penne Arrabbiata</li>
+              <li>Penne Broccoli</li>
+              <li>Rigatoni alla Marcel</li>
+              <li>Gnocchi Piemontese</li>
+              <li>Gnocchi Spinat</li>
+              <li>Lasagne Bolognese</li>
+              <li>Canneloni</li>
+              <li>Tris Spezial</li>
+            </ul>
+            <ul class="price">
+              <li>5,00€</li>
+              <li>7,00€</li>
+              <li>5,00€</li>
+              <li>7,00€</li>
+              <li>8,00€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>8,00€</li>
+              <li>8,50€</li>
+              <li>8,50€</li>
+              <li>7,00€</li>
+              <li>7,00€</li>
+              <li>9,00€</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="opening-hours" class="column">
+        <div class="background-img column">
+          <div class="title column">
+            <h3>ÖFFNUNGSZEITEN</h3>
+            <hr class="hr3" />
+          </div>
+          <div class="content column">
+            <div class="row">
+              <span>Montag - Freitag, Sonntag</span>
+              <span>11:00 - 14:00 | 17:00 - 21:00</span>
+            </div>
+            <div class="row">
+              <span>Samstag</span>
+              <span>Geschlossen</span>
+            </div>
+          </div>
+          <span>
+            <i><img src="images/iconmonstr-phone-3.svg" /></i>
+            0911 5404935
+          </span>
+        </div>
+      </section>
+      <section id="about" class="column">
+        <h2>ÜBER DAS RESTAURANT</h2>
+        <hr class="hr2" />
+        <div class="gallery">
+          <img id="img1" src="images/img1.png" alt="img1" />
+          <img id="img2" src="images/img2.png" alt="img2" />
+          <img id="img3" src="images/img3.png" alt="img3" />
+          <img id="img4" src="images/img4.png" alt="img5" />
+          <img id="img5" src="images/img5.png" alt="img4" />
+        </div>
+      </section>
+      <section id="location" class="column">
+        <h2>STANDORT</h2>
+        <hr class="hr2" />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1541.7911107400644!2d11.161178372622157!3d49.46612036859558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f586f7424097d%3A0x137c7b4d24aa0c11!2sPizzeria%20Da%20Marcel!5e0!3m2!1sde!2sde!4v1618154245307!5m2!1sde!2sde"
+          width="80%"
+          height="515"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </section>
+    </main>
+    <footer class="column">
+      <a href="imprint.html">IMPRESSUM</a>
+      <span id="made-by">designed by <strong>Jan Kaczmarek</strong></span>
+      <span>Alle Rechte sind dem Betreiber der Website vorbehalten.</span>
+    </footer>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,923 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&family=Oswald:wght@300;400;500&display=swap");
+:root {
+  font-size: 0.6vw;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  padding: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #aaa69d;
+  border: 2px solid #ddd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #84817a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 100;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* 
+*  Prepares every HR-Element
+*  Sets .hr1 to margin-top: 5rem
+*  Overrides .hr2's and .hr3's margin-top to 4rem
+*/
+.hr1,
+.hr2,
+.hr3 {
+  height: 0.5rem;
+  width: 15rem;
+  border: none;
+  margin-top: 3.7rem;
+}
+
+.hr2,
+.hr3 {
+  background: #fff;
+  margin-top: 4.3rem;
+}
+
+.hr1,
+.hr2 {
+  background: #ff5252;
+}
+
+button {
+  color: #84817a;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 3.6rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 765px) {
+  h1,
+  h2,
+  h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 5vw;
+  }
+  h1,
+  h2 {
+    color: #ff5252;
+  }
+  h3 {
+    color: #fff;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 8.2rem;
+  }
+  header .menu-close {
+    display: none;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    top: 0;
+    height: 8.2rem;
+    width: 100%;
+    padding: 0 15rem;
+    background: #84817a;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav a {
+    text-decoration: none;
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+  }
+  header nav a:hover {
+    color: #ff5252;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header nav ul li {
+    list-style: none;
+  }
+  header nav ul li a {
+    color: #fff;
+    font-weight: 300;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.4vw;
+    margin: 0 3.55rem 0 0;
+  }
+  header nav .logo {
+    color: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 1.4vw;
+  }
+  header .title {
+    margin: 5rem 15rem 0 15rem;
+    width: 50%;
+  }
+  header .title p {
+    font-size: 3.6rem;
+    margin: 4.2rem 0 8.5rem 0;
+    width: 75%;
+  }
+  header .title button {
+    background: #fff;
+    border: 0.5rem solid #84817a;
+    padding: 3.55rem 14.25rem;
+    margin-bottom: 10rem;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    transition: -webkit-transform 0.25s ease-out;
+    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+    width: 75%;
+    text-align: center;
+  }
+  header .title button:hover {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  header #pizza-img {
+    position: absolute;
+    max-width: 40%;
+    max-height: 80%;
+    right: 0;
+    top: 55%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  main {
+    max-width: 100%;
+  }
+  main #menu {
+    background: #f7f1e3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100vh;
+  }
+  main #menu h2 {
+    padding-top: 9.5rem;
+  }
+  main #menu #salad-img {
+    position: absolute;
+    left: 0;
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+    max-width: 37.5%;
+    max-height: 75%;
+  }
+  main #menu .menu-ui {
+    width: 40%;
+    margin-left: 40%;
+  }
+  main #menu .menu-ui li {
+    list-style: none;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6vh;
+  }
+  main #menu .tabs {
+    width: 100%;
+    margin-top: 10rem;
+  }
+  main #menu .tabs button {
+    width: 33.33%;
+    border: none;
+    background: #aaa69d;
+    color: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    font-size: 1.25vw;
+    padding: 3vh 3.25vw;
+  }
+  main #menu .tabs button:hover {
+    background: #84817a;
+  }
+  main #menu .tabs .active {
+    background-color: #84817a;
+  }
+  main #menu .food,
+  main #menu .price {
+    margin-top: 3.3rem;
+  }
+  main #menu .food li,
+  main #menu .price li {
+    margin-bottom: 1rem;
+    font-size: 1.25vw;
+  }
+  main #menu .food {
+    font-weight: 400;
+    width: 75%;
+  }
+  main #menu .price {
+    font-weight: 300;
+    width: 25%;
+    text-align: end;
+  }
+  main #opening-hours {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 15rem 0;
+  }
+  main #opening-hours .background-img {
+    width: calc(100% - 15rem);
+    max-height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15rem 0;
+    background: url("../images/opening-hours-bg.png");
+    background-size: cover;
+    color: #fff;
+  }
+  main #opening-hours .background-img .title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #opening-hours .background-img .title h3 {
+    margin-top: 9rem;
+  }
+  main #opening-hours .background-img .title hr {
+    margin-bottom: 4.8rem;
+  }
+  main #opening-hours .background-img span {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 3.6rem;
+    margin-top: 10rem;
+  }
+  main #opening-hours .background-img .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  main #opening-hours .background-img .content span {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin-top: 0;
+  }
+  main #opening-hours .background-img .content .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: calc(100% - 46rem);
+    margin-bottom: 3rem;
+  }
+  main #about {
+    max-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #about .gallery {
+    margin-top: 5rem;
+    max-width: 113rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    overflow-x: hidden;
+    gap: 2rem;
+  }
+  main #about .gallery img {
+    width: 100%;
+    height: 100%;
+  }
+  main #about .gallery #img1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  main #about .gallery #img2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  main #about .gallery #img3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  main #about .gallery #img4 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  main #about .gallery #img5 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  main #location {
+    margin-top: 15rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #location hr {
+    margin-bottom: 5rem;
+  }
+  footer {
+    background-color: #aaa69d;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5rem 0;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+  footer a {
+    color: #fff;
+  }
+  footer span {
+    font-weight: 300;
+  }
+  footer #made-by {
+    margin: 1.8rem 0;
+    font-weight: 400;
+  }
+  footer #made-by strong {
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 764px) {
+  h1,
+  h2,
+  h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 8vw;
+  }
+  h1,
+  h2 {
+    color: #ff5252;
+  }
+  h3 {
+    color: #fff;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    height: 100vh;
+  }
+  header .menu-close {
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 10rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+  header .bar1,
+  header .bar2,
+  header .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #aaa69d;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  header .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  header .change .bar2 {
+    opacity: 0;
+  }
+  header .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+  }
+  header nav {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 5rem 0;
+    width: 75%;
+    height: 100%;
+    background: #84817a;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+  }
+  header nav a:hover {
+    color: #ff5252;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav ul li {
+    list-style: none;
+    margin: 0.5rem 0;
+  }
+  header nav ul li a {
+    color: #fff;
+    font-weight: 300;
+    font-family: "Oswald", sans-serif;
+    font-size: 4vw;
+  }
+  header nav .logo {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 4vw;
+    margin-bottom: 10rem;
+  }
+  header .visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  header .title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 5rem 15rem 0 15rem;
+    width: 90%;
+  }
+  header .title p {
+    font-size: 3vw;
+    margin: 4.2rem 0 8.5rem 0;
+    width: 75%;
+  }
+  header .title button {
+    background: #fff;
+    border: 0.5rem solid #84817a;
+    padding: 3.55rem 14.25rem;
+    margin-bottom: 10rem;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    transition: -webkit-transform 0.25s ease-out;
+    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+    width: 75%;
+    text-align: center;
+  }
+  header .title button:hover {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  header #pizza-img {
+    max-width: 35%;
+    max-height: 50%;
+  }
+  main {
+    max-width: 100%;
+  }
+  main #menu {
+    background: #f7f1e3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+  }
+  main #menu h2 {
+    padding-top: 9.5rem;
+  }
+  main #menu #salad-img {
+    margin: 15rem 0;
+    max-width: 37.5%;
+    max-height: 75%;
+  }
+  main #menu .menu-ui {
+    width: 80%;
+  }
+  main #menu .menu-ui li {
+    list-style: none;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.6vh;
+  }
+  main #menu .tabs {
+    width: 100%;
+    margin-top: 10rem;
+  }
+  main #menu .tabs button {
+    width: 33.33%;
+    border: none;
+    background: #aaa69d;
+    color: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    font-size: 2.5vw;
+    padding: 3vh 3.25vw;
+  }
+  main #menu .tabs button:hover {
+    background: #84817a;
+  }
+  main #menu .tabs .active {
+    background-color: #84817a;
+  }
+  main #menu .food,
+  main #menu .price {
+    margin-top: 3.3rem;
+  }
+  main #menu .food li,
+  main #menu .price li {
+    margin-bottom: 1rem;
+    font-size: 2.5vw;
+  }
+  main #menu .food {
+    font-weight: 400;
+    width: 75%;
+  }
+  main #menu .price {
+    font-weight: 300;
+    width: 25%;
+    text-align: end;
+  }
+  main #opening-hours {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #opening-hours .background-img {
+    height: 50%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15rem 0;
+    background: url("../images/opening-hours-bg.png");
+    background-size: cover;
+    color: #fff;
+  }
+  main #opening-hours .background-img .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main #opening-hours .background-img .title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #opening-hours .background-img .title h3 {
+    margin-top: 9rem;
+  }
+  main #opening-hours .background-img .title hr {
+    margin-bottom: 4.8rem;
+  }
+  main #opening-hours .background-img span {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 6.3rem;
+    margin-top: 10rem;
+  }
+  main #opening-hours .background-img .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  main #opening-hours .background-img .content span {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    font-size: 4.4rem;
+    margin-top: 0;
+  }
+  main #opening-hours .background-img .content .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: calc(100% - 46rem);
+    margin-bottom: 3rem;
+  }
+  main #about {
+    max-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #about .gallery {
+    margin-top: 5rem;
+    max-width: 113rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    overflow-x: hidden;
+    gap: 2rem;
+  }
+  main #about .gallery img {
+    width: 100%;
+    height: 100%;
+  }
+  main #about .gallery #img1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  main #about .gallery #img2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  main #about .gallery #img3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  main #about .gallery #img4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  main #about .gallery #img5 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  main #location {
+    margin-top: 15rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #location hr {
+    margin-bottom: 5rem;
+  }
+  footer {
+    background-color: #aaa69d;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5rem 0;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 4.4rem;
+    font-weight: 400;
+  }
+  footer a {
+    color: #fff;
+  }
+  footer span {
+    font-weight: 300;
+  }
+  footer #made-by {
+    margin: 1.8rem 0;
+    font-weight: 400;
+  }
+  footer #made-by strong {
+    font-weight: 500;
+  }
+}
+
+.list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 35vh;
+  width: 100%;
+}
+
+#list-pizzas,
+#list-noodles {
+  display: none;
+}
+
+#list-pizzas ul:last-child,
+#list-noodles ul:last-child {
+  padding-right: 10px;
+}
+/*# sourceMappingURL=style.css.map */
