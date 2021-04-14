@@ -1,116 +1,101 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&family=Oswald:wght@300;400;500&display=swap");
-:root {
-  font-size: 0.6vw;
+@media (prefers-color-scheme: dark), (prefers-color-scheme: light) {
+  :root {
+    font-size: 0.6vw;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    padding: 3px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #aaa69d;
+    border: 2px solid #ddd;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #84817a;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  section {
+    min-height: 100vh;
+    max-width: 100%;
+  }
+  p {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 100;
+  }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* 
+  *  Prepares every HR-Element
+  *  Sets .hr1 to margin-top: 5rem
+  *  Overrides .hr2's and .hr3's margin-top to 4rem
+  */
+  .hr1,
+  .hr2,
+  .hr3 {
+    height: 0.5rem;
+    width: 15rem;
+    border: none;
+    margin-top: 3.7rem;
+  }
+  .hr2,
+  .hr3 {
+    background: #fff;
+    margin-top: 4.3rem;
+  }
+  .hr1,
+  .hr2 {
+    background: #ff5252;
+  }
+  button {
+    color: #84817a;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-size: 3.6rem;
+  }
+  button:focus {
+    outline: none;
+  }
+  button:hover {
+    cursor: pointer;
+  }
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-  padding: 3px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #ddd;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #aaa69d;
-  border: 2px solid #ddd;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #84817a;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  width: 100%;
-}
-
-body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-section {
-  min-height: 100vh;
-  max-width: 100%;
-}
-
-p {
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 100;
-}
-
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-/* 
-*  Prepares every HR-Element
-*  Sets .hr1 to margin-top: 5rem
-*  Overrides .hr2's and .hr3's margin-top to 4rem
-*/
-.hr1,
-.hr2,
-.hr3 {
-  height: 0.5rem;
-  width: 15rem;
-  border: none;
-  margin-top: 3.7rem;
-}
-
-.hr2,
-.hr3 {
-  background: #fff;
-  margin-top: 4.3rem;
-}
-
-.hr1,
-.hr2 {
-  background: #ff5252;
-}
-
-button {
-  color: #84817a;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 400;
-  font-size: 3.6rem;
-}
-
-button:focus {
-  outline: none;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-@media only screen and (min-width: 765px) {
+@media only screen and (prefers-color-scheme: dark) and (min-width: 765px), only screen and (prefers-color-scheme: light) and (min-width: 765px) {
   h1,
   h2,
   h3 {
@@ -481,7 +466,7 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 764px) {
+@media only screen and (prefers-color-scheme: dark) and (max-width: 764px), only screen and (prefers-color-scheme: light) and (max-width: 764px) {
   h1,
   h2,
   h3 {
@@ -904,20 +889,20 @@ button:hover {
   }
 }
 
-.list {
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: 35vh;
-  width: 100%;
-}
-
-#list-pizzas,
-#list-noodles {
-  display: none;
-}
-
-#list-pizzas ul:last-child,
-#list-noodles ul:last-child {
-  padding-right: 10px;
+@media (prefers-color-scheme: dark), (prefers-color-scheme: light) {
+  .list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 35vh;
+    width: 100%;
+  }
+  #list-pizzas,
+  #list-noodles {
+    display: none;
+  }
+  #list-pizzas ul:last-child,
+  #list-noodles ul:last-child {
+    padding-right: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

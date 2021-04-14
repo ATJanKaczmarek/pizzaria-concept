@@ -7,733 +7,736 @@ $black: #000;
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&family=Oswald:wght@300;400;500&display=swap");
 
-:root {
-  font-size: 0.6vw;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-  padding: 3px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #ddd;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: $hotstone;
-  border: 2px solid #ddd;
-  &:hover {
-    background: $greyprocelain;
+@media (prefers-color-scheme: dark), (prefers-color-scheme: light) {
+  :root {
+    font-size: 0.6vw;
   }
-}
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  width: 100%;
-}
-
-body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-section {
-  min-height: 100vh;
-  max-width: 100%;
-}
-
-p {
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 100;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-}
-
-/* 
-*  Prepares every HR-Element
-*  Sets .hr1 to margin-top: 5rem
-*  Overrides .hr2's and .hr3's margin-top to 4rem
-*/
-.hr1,
-.hr2,
-.hr3 {
-  height: 0.5rem;
-  width: 15rem;
-  border: none;
-  margin-top: 3.7rem;
-}
-.hr2,
-.hr3 {
-  background: $white;
-  margin-top: 4.3rem;
-}
-
-.hr1,
-.hr2 {
-  background: $red;
-}
-
-button {
-  color: $greyprocelain;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 400;
-  font-size: 3.6rem;
-
-  &:focus {
-    outline: none;
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    padding: 3px;
   }
-  &:hover {
-    cursor: pointer;
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ddd;
   }
-}
-
-@media only screen and (min-width: 765px) {
-  h1,
-  h2,
-  h3 {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 5vw;
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $hotstone;
+    border: 2px solid #ddd;
+    &:hover {
+      background: $greyprocelain;
+    }
   }
-
-  h1,
-  h2 {
-    color: $red;
+  
+  * {
+    padding: 0;
+    margin: 0;
   }
-
-  h3 {
-    color: $white;
+  
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
   }
-
-  header {
+  
+  body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  section {
+    min-height: 100vh;
+    max-width: 100%;
+  }
+  
+  p {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 100;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
-    padding-top: 8.2rem;
-    .menu-close {
-      display: none;
-    }
-    nav {
-      display: flex;
-      flex-direction: row;
-      position: absolute;
-      top: 0;
-      height: 8.2rem;
-      width: 100%;
-      padding: 0 15rem;
-      background: $greyprocelain;
-      justify-content: space-between;
-      align-items: center;
-      a {
-        text-decoration: none;
-        transition: color 0.25s;
-        &:hover {
-          color: $red;
-        }
-      }
-      ul {
-        display: flex;
-        flex-direction: row;
-        li {
-          list-style: none;
-          a {
-            color: $white;
-            font-weight: 300;
-            font-family: "Oswald", sans-serif;
-            font-size: 1.4vw;
-            margin: 0 3.55rem 0 0;
-          }
-        }
-      }
-      .logo {
-        color: $white;
-        font-family: "Noto Sans JP", sans-serif;
-        font-weight: 700;
-        font-size: 1.4vw;
-      }
-    }
-    .title {
-      margin: 5rem 15rem 0 15rem;
-      width: 50%;
-      p {
-        font-size: 3.6rem;
-        margin: 4.2rem 0 8.5rem 0;
-        width: 75%;
-      }
-      button {
-        background: $white;
-        border: 0.5rem solid $greyprocelain;
-        padding: 3.55rem 14.25rem;
-        margin-bottom: 10rem;
-        transition: transform 0.25s ease-out;
-        width: 75%;
-        text-align: center;
-        &:hover {
-          transform: translateY(-1rem);
-        }
-      }
-    }
-    #pizza-img {
-      position: absolute;
-      max-width: 40%;
-      max-height: 80%;
-      right: 0;
-      top: 55%;
-      transform: translateY(-50%);
-    }
   }
-  main {
-    max-width: 100%;
-    #menu {
-      background: $swanwhite;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      h2 {
-        padding-top: 9.5rem;
-      }
-      #salad-img {
-        position: absolute;
-        left: 0;
-        transform: translateY(25%);
-        max-width: 37.5%;
-        max-height: 75%;
-      }
-      .menu-ui {
-        width: 40%;
-        margin-left: 40%;
-        li {
-          list-style: none;
-          font-family: "Noto Sans JP", sans-serif;
-          font-size: 1.6vh;
-        }
-      }
-
-      .tabs {
-        width: 100%;
-        margin-top: 10rem;
-        button {
-          width: 33.33%;
-          border: none;
-          background: $hotstone;
-          color: $white;
-          font-family: "Noto Sans JP", sans-serif;
-          font-weight: 300;
-          font-size: 1.25vw;
-          padding: 3vh 3.25vw;
-          &:hover {
-            background: $greyprocelain;
-          }
-        }
-        .active {
-          background-color: $greyprocelain;
-        }
-      }
-      .food,
-      .price {
-        margin-top: 3.3rem;
-        li {
-          margin-bottom: 1rem;
-          font-size: 1.25vw;
-        }
-      }
-      .food {
-        font-weight: 400;
-        width: 75%;
-      }
-      .price {
-        font-weight: 300;
-        width: 25%;
-        text-align: end;
-      }
-    }
-    #opening-hours {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      margin: 15rem 0;
-      .background-img {
-        width: calc(100% - 15rem);
-        max-height: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15rem 0;
-        background: url("../images/opening-hours-bg.png");
-        background-size: cover;
-        color: $white;
-        .title {
-          align-items: center;
-          h3 {
-            margin-top: 9rem;
-          }
-          hr {
-            margin-bottom: 4.8rem;
-          }
-        }
-        span {
-          font-family: "Oswald", sans-serif;
-          font-weight: 400;
-          font-size: 3.6rem;
-          margin-top: 10rem;
-        }
-        .content {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          span {
-            font-family: "Noto Sans JP", sans-serif;
-            font-weight: 300;
-            font-size: 2.2rem;
-            margin-top: 0;
-          }
-          .row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: calc(100% - 46rem);
-            margin-bottom: 3rem;
-          }
-        }
-      }
-    }
-    #about {
-      max-width: 100%;
-      align-items: center;
-      .gallery {
-        margin-top: 5rem;
-        max-width: 113rem;
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        overflow-x: hidden;
-        gap: 2rem;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-
-        #img1 {
-          grid-column: 1 / 2;
-          grid-row: 1 / 2;
-        }
-
-        #img2 {
-          grid-column: 2 / 4;
-          grid-row: 1 / 2;
-        }
-
-        #img3 {
-          grid-column: 1 / 2;
-          grid-row: 2 / 3;
-        }
-
-        #img4 {
-          grid-column: 2 / 3;
-          grid-row: 2 / 3;
-        }
-
-        #img5 {
-          grid-column: 3 / 4;
-          grid-row: 2 / 3;
-        }
-      }
-    }
-    #location {
-      margin-top: 15rem;
-      align-items: center;
-      hr {
-        margin-bottom: 5rem;
-      }
-    }
+  
+  /* 
+  *  Prepares every HR-Element
+  *  Sets .hr1 to margin-top: 5rem
+  *  Overrides .hr2's and .hr3's margin-top to 4rem
+  */
+  .hr1,
+  .hr2,
+  .hr3 {
+    height: 0.5rem;
+    width: 15rem;
+    border: none;
+    margin-top: 3.7rem;
   }
-  footer {
-    background-color: $hotstone;
-    align-items: center;
-    padding: 5rem 0;
-    color: $white;
-    font-family: "Oswald", sans-serif;
-    font-size: 2.2rem;
+  .hr2,
+  .hr3 {
+    background: $white;
+    margin-top: 4.3rem;
+  }
+  
+  .hr1,
+  .hr2 {
+    background: $red;
+  }
+  
+  button {
+    color: $greyprocelain;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 400;
-    a {
-      color: $white;
+    font-size: 3.6rem;
+  
+    &:focus {
+      outline: none;
     }
-    span {
-      font-weight: 300;
-    }
-    #made-by {
-      margin: 1.8rem 0;
-      font-weight: 400;
-      strong {
-        font-weight: 500;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 764px) {
-  h1,
-  h2,
-  h3 {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-size: 8vw;
-  }
-
-  h1,
-  h2 {
-    color: $red;
-  }
-
-  h3 {
-    color: $white;
-  }
-  header {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: 100vh;
-    .menu-close {
-      z-index: 10;
-      position: fixed;
-      left: 0;
-      top: 0;
-      margin: 10rem;
-      display: inline-block;
+    &:hover {
       cursor: pointer;
     }
-    .bar1,
-    .bar2,
-    .bar3 {
-      width: 35px;
-      height: 5px;
-      background-color: $hotstone;
-      margin: 6px 0;
-      transition: 0.4s;
-    }
-
-    .change {
-      .bar1 {
-        transform: rotate(-45deg) translate(-9px, 6px);
-      }
-      .bar2 {
-        opacity: 0;
-      }
-      .bar3 {
-        transform: rotate(45deg) translate(-8px, -8px);
-      }
-    }
-    nav {
-      z-index: 9;
-      position: fixed;
-      top: 0;
-      left: -100%;
-      display: flex;
-      flex-direction: column;
-      padding: 5rem 0;
-      width: 75%;
-      height: 100%;
-      background: $greyprocelain;
-      justify-content: space-around;
-      align-items: center;
-      a {
-        text-decoration: none;
-        color: $white;
-        font-family: "Oswald", sans-serif;
-        font-weight: 300;
-        transition: color 0.25s;
-        &:hover {
-          color: $red;
-        }
-      }
-      ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        li {
-          list-style: none;
-          a {
-            color: $white;
-            font-weight: 300;
-            font-family: "Oswald", sans-serif;
-            font-size: 4vw;
-          }
-          margin: 0.5rem 0;
-        }
-      }
-      .logo {
-        font-family: "Noto Sans JP", sans-serif;
-        font-weight: 700;
-        font-size: 4vw;
-        margin-bottom: 10rem;
-      }
-      transition: 0.4s;
-    }
-    .visible {
-      display: flex;
-      left: 0;
-      transition: 0.4s;
-    }
-    .title {
-      justify-content: center;
-      align-items: center;
-      margin: 5rem 15rem 0 15rem;
-      width: 90%;
-      p {
-        font-size: 3vw;
-        margin: 4.2rem 0 8.5rem 0;
-        width: 75%;
-      }
-      button {
-        background: $white;
-        border: 0.5rem solid $greyprocelain;
-        padding: 3.55rem 14.25rem;
-        margin-bottom: 10rem;
-        transition: transform 0.25s ease-out;
-        width: 75%;
-        text-align: center;
-        &:hover {
-          transform: translateY(-1rem);
-        }
-      }
-    }
-    #pizza-img {
-      max-width: 35%;
-      max-height: 50%;
-    }
   }
-  main {
-    max-width: 100%;
-    #menu {
-      background: $swanwhite;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding-bottom: 5rem;
-      h2 {
-        padding-top: 9.5rem;
-      }
-      #salad-img {
-        margin: 15rem 0;
-        max-width: 37.5%;
-        max-height: 75%;
-      }
-      .menu-ui {
-        width: 80%;
-        li {
-          list-style: none;
-          font-family: "Noto Sans JP", sans-serif;
-          font-size: 1.6vh;
-        }
-      }
 
-      .tabs {
-        width: 100%;
-        margin-top: 10rem;
-        button {
-          width: 33.33%;
-          border: none;
-          background: $hotstone;
-          color: $white;
-          font-family: "Noto Sans JP", sans-serif;
-          font-weight: 300;
-          font-size: 2.5vw;
-          padding: 3vh 3.25vw;
-          &:hover {
-            background: $greyprocelain;
-          }
-        }
-        .active {
-          background-color: $greyprocelain;
-        }
-      }
-      .food,
-      .price {
-        margin-top: 3.3rem;
-        li {
-          margin-bottom: 1rem;
-          font-size: 2.5vw;
-        }
-      }
-      .food {
-        font-weight: 400;
-        width: 75%;
-      }
-      .price {
-        font-weight: 300;
-        width: 25%;
-        text-align: end;
-      }
+  @media only screen and (min-width: 765px) {
+    h1,
+    h2,
+    h3 {
+      font-family: "Oswald", sans-serif;
+      font-weight: 400;
+      font-size: 5vw;
     }
-    #opening-hours {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .background-img {
-        height: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15rem 0;
-        background: url("../images/opening-hours-bg.png");
-        background-size: cover;
-        color: $white;
-        .row {
-          flex-direction: column;
-        }
-        .title {
-          align-items: center;
-          h3 {
-            margin-top: 9rem;
-          }
-          hr {
-            margin-bottom: 4.8rem;
-          }
-        }
-        span {
-          font-family: "Oswald", sans-serif;
-          font-weight: 400;
-          font-size: 6.3rem;
-          margin-top: 10rem;
-        }
-        .content {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          span {
-            font-family: "Noto Sans JP", sans-serif;
-            font-weight: 300;
-            font-size: 4.4rem;
-            margin-top: 0;
-          }
-          .row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: calc(100% - 46rem);
-            margin-bottom: 3rem;
-          }
-        }
-      }
+  
+    h1,
+    h2 {
+      color: $red;
     }
-    #about {
-      max-width: 100%;
-      align-items: center;
-      .gallery {
-        margin-top: 5rem;
-        max-width: 113rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        overflow-x: hidden;
-        gap: 2rem;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-
-        #img1 {
-          grid-column: 1 / 4;
-          grid-row: 1 / 2;
-        }
-
-        #img2 {
-          grid-column: 1 / 4;
-          grid-row: 3 / 4;
-        }
-
-        #img3 {
-          grid-column: 1 / 4;
-          grid-row: 4 / 5;
-        }
-
-        #img4 {
-          grid-column: 1 / 2;
-          grid-row: 2 / 3;
-        }
-
-        #img5 {
-          grid-column: 2 / 4;
-          grid-row: 2 / 3;
-        }
-      }
-    }
-    #location {
-      margin-top: 15rem;
-      align-items: center;
-      hr {
-        margin-bottom: 5rem;
-      }
-    }
-  }
-  footer {
-    background-color: $hotstone;
-    align-items: center;
-    padding: 5rem 0;
-    color: $white;
-    font-family: "Oswald", sans-serif;
-    font-size: 4.4rem;
-    font-weight: 400;
-    a {
+  
+    h3 {
       color: $white;
     }
-    span {
-      font-weight: 300;
+  
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      padding-top: 8.2rem;
+      .menu-close {
+        display: none;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 0;
+        height: 8.2rem;
+        width: 100%;
+        padding: 0 15rem;
+        background: $greyprocelain;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          text-decoration: none;
+          transition: color 0.25s;
+          &:hover {
+            color: $red;
+          }
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          li {
+            list-style: none;
+            a {
+              color: $white;
+              font-weight: 300;
+              font-family: "Oswald", sans-serif;
+              font-size: 1.4vw;
+              margin: 0 3.55rem 0 0;
+            }
+          }
+        }
+        .logo {
+          color: $white;
+          font-family: "Noto Sans JP", sans-serif;
+          font-weight: 700;
+          font-size: 1.4vw;
+        }
+      }
+      .title {
+        margin: 5rem 15rem 0 15rem;
+        width: 50%;
+        p {
+          font-size: 3.6rem;
+          margin: 4.2rem 0 8.5rem 0;
+          width: 75%;
+        }
+        button {
+          background: $white;
+          border: 0.5rem solid $greyprocelain;
+          padding: 3.55rem 14.25rem;
+          margin-bottom: 10rem;
+          transition: transform 0.25s ease-out;
+          width: 75%;
+          text-align: center;
+          &:hover {
+            transform: translateY(-1rem);
+          }
+        }
+      }
+      #pizza-img {
+        position: absolute;
+        max-width: 40%;
+        max-height: 80%;
+        right: 0;
+        top: 55%;
+        transform: translateY(-50%);
+      }
     }
-    #made-by {
-      margin: 1.8rem 0;
+    main {
+      max-width: 100%;
+      #menu {
+        background: $swanwhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        h2 {
+          padding-top: 9.5rem;
+        }
+        #salad-img {
+          position: absolute;
+          left: 0;
+          transform: translateY(25%);
+          max-width: 37.5%;
+          max-height: 75%;
+        }
+        .menu-ui {
+          width: 40%;
+          margin-left: 40%;
+          li {
+            list-style: none;
+            font-family: "Noto Sans JP", sans-serif;
+            font-size: 1.6vh;
+          }
+        }
+  
+        .tabs {
+          width: 100%;
+          margin-top: 10rem;
+          button {
+            width: 33.33%;
+            border: none;
+            background: $hotstone;
+            color: $white;
+            font-family: "Noto Sans JP", sans-serif;
+            font-weight: 300;
+            font-size: 1.25vw;
+            padding: 3vh 3.25vw;
+            &:hover {
+              background: $greyprocelain;
+            }
+          }
+          .active {
+            background-color: $greyprocelain;
+          }
+        }
+        .food,
+        .price {
+          margin-top: 3.3rem;
+          li {
+            margin-bottom: 1rem;
+            font-size: 1.25vw;
+          }
+        }
+        .food {
+          font-weight: 400;
+          width: 75%;
+        }
+        .price {
+          font-weight: 300;
+          width: 25%;
+          text-align: end;
+        }
+      }
+      #opening-hours {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        margin: 15rem 0;
+        .background-img {
+          width: calc(100% - 15rem);
+          max-height: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 15rem 0;
+          background: url("../images/opening-hours-bg.png");
+          background-size: cover;
+          color: $white;
+          .title {
+            align-items: center;
+            h3 {
+              margin-top: 9rem;
+            }
+            hr {
+              margin-bottom: 4.8rem;
+            }
+          }
+          span {
+            font-family: "Oswald", sans-serif;
+            font-weight: 400;
+            font-size: 3.6rem;
+            margin-top: 10rem;
+          }
+          .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            span {
+              font-family: "Noto Sans JP", sans-serif;
+              font-weight: 300;
+              font-size: 2.2rem;
+              margin-top: 0;
+            }
+            .row {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: calc(100% - 46rem);
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+      #about {
+        max-width: 100%;
+        align-items: center;
+        .gallery {
+          margin-top: 5rem;
+          max-width: 113rem;
+          display: grid;
+          grid-template-columns: 2fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          overflow-x: hidden;
+          gap: 2rem;
+  
+          img {
+            width: 100%;
+            height: 100%;
+          }
+  
+          #img1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+          }
+  
+          #img2 {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+          }
+  
+          #img3 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+          }
+  
+          #img4 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+          }
+  
+          #img5 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+          }
+        }
+      }
+      #location {
+        margin-top: 15rem;
+        align-items: center;
+        hr {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+    footer {
+      background-color: $hotstone;
+      align-items: center;
+      padding: 5rem 0;
+      color: $white;
+      font-family: "Oswald", sans-serif;
+      font-size: 2.2rem;
       font-weight: 400;
-      strong {
-        font-weight: 500;
+      a {
+        color: $white;
+      }
+      span {
+        font-weight: 300;
+      }
+      #made-by {
+        margin: 1.8rem 0;
+        font-weight: 400;
+        strong {
+          font-weight: 500;
+        }
       }
     }
   }
-}
-
-.list {
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: 35vh;
-  width: 100%;
-}
-
-#list-pizzas,
-#list-noodles {
-  display: none;
-  ul:last-child {
-    padding-right: 10px;
+  
+  @media only screen and (max-width: 764px) {
+    h1,
+    h2,
+    h3 {
+      font-family: "Oswald", sans-serif;
+      font-weight: 400;
+      font-size: 8vw;
+    }
+  
+    h1,
+    h2 {
+      color: $red;
+    }
+  
+    h3 {
+      color: $white;
+    }
+    header {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      height: 100vh;
+      .menu-close {
+        z-index: 10;
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin: 10rem;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: $hotstone;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+  
+      .change {
+        .bar1 {
+          transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        .bar2 {
+          opacity: 0;
+        }
+        .bar3 {
+          transform: rotate(45deg) translate(-8px, -8px);
+        }
+      }
+      nav {
+        z-index: 9;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 0;
+        width: 75%;
+        height: 100%;
+        background: $greyprocelain;
+        justify-content: space-around;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: $white;
+          font-family: "Oswald", sans-serif;
+          font-weight: 300;
+          transition: color 0.25s;
+          &:hover {
+            color: $red;
+          }
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          li {
+            list-style: none;
+            a {
+              color: $white;
+              font-weight: 300;
+              font-family: "Oswald", sans-serif;
+              font-size: 4vw;
+            }
+            margin: 0.5rem 0;
+          }
+        }
+        .logo {
+          font-family: "Noto Sans JP", sans-serif;
+          font-weight: 700;
+          font-size: 4vw;
+          margin-bottom: 10rem;
+        }
+        transition: 0.4s;
+      }
+      .visible {
+        display: flex;
+        left: 0;
+        transition: 0.4s;
+      }
+      .title {
+        justify-content: center;
+        align-items: center;
+        margin: 5rem 15rem 0 15rem;
+        width: 90%;
+        p {
+          font-size: 3vw;
+          margin: 4.2rem 0 8.5rem 0;
+          width: 75%;
+        }
+        button {
+          background: $white;
+          border: 0.5rem solid $greyprocelain;
+          padding: 3.55rem 14.25rem;
+          margin-bottom: 10rem;
+          transition: transform 0.25s ease-out;
+          width: 75%;
+          text-align: center;
+          &:hover {
+            transform: translateY(-1rem);
+          }
+        }
+      }
+      #pizza-img {
+        max-width: 35%;
+        max-height: 50%;
+      }
+    }
+    main {
+      max-width: 100%;
+      #menu {
+        background: $swanwhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding-bottom: 5rem;
+        h2 {
+          padding-top: 9.5rem;
+        }
+        #salad-img {
+          margin: 15rem 0;
+          max-width: 37.5%;
+          max-height: 75%;
+        }
+        .menu-ui {
+          width: 80%;
+          li {
+            list-style: none;
+            font-family: "Noto Sans JP", sans-serif;
+            font-size: 1.6vh;
+          }
+        }
+  
+        .tabs {
+          width: 100%;
+          margin-top: 10rem;
+          button {
+            width: 33.33%;
+            border: none;
+            background: $hotstone;
+            color: $white;
+            font-family: "Noto Sans JP", sans-serif;
+            font-weight: 300;
+            font-size: 2.5vw;
+            padding: 3vh 3.25vw;
+            &:hover {
+              background: $greyprocelain;
+            }
+          }
+          .active {
+            background-color: $greyprocelain;
+          }
+        }
+        .food,
+        .price {
+          margin-top: 3.3rem;
+          li {
+            margin-bottom: 1rem;
+            font-size: 2.5vw;
+          }
+        }
+        .food {
+          font-weight: 400;
+          width: 75%;
+        }
+        .price {
+          font-weight: 300;
+          width: 25%;
+          text-align: end;
+        }
+      }
+      #opening-hours {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .background-img {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 15rem 0;
+          background: url("../images/opening-hours-bg.png");
+          background-size: cover;
+          color: $white;
+          .row {
+            flex-direction: column;
+          }
+          .title {
+            align-items: center;
+            h3 {
+              margin-top: 9rem;
+            }
+            hr {
+              margin-bottom: 4.8rem;
+            }
+          }
+          span {
+            font-family: "Oswald", sans-serif;
+            font-weight: 400;
+            font-size: 6.3rem;
+            margin-top: 10rem;
+          }
+          .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            span {
+              font-family: "Noto Sans JP", sans-serif;
+              font-weight: 300;
+              font-size: 4.4rem;
+              margin-top: 0;
+            }
+            .row {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: calc(100% - 46rem);
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+      #about {
+        max-width: 100%;
+        align-items: center;
+        .gallery {
+          margin-top: 5rem;
+          max-width: 113rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+          overflow-x: hidden;
+          gap: 2rem;
+  
+          img {
+            width: 100%;
+            height: 100%;
+          }
+  
+          #img1 {
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+          }
+  
+          #img2 {
+            grid-column: 1 / 4;
+            grid-row: 3 / 4;
+          }
+  
+          #img3 {
+            grid-column: 1 / 4;
+            grid-row: 4 / 5;
+          }
+  
+          #img4 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+          }
+  
+          #img5 {
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+          }
+        }
+      }
+      #location {
+        margin-top: 15rem;
+        align-items: center;
+        hr {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+    footer {
+      background-color: $hotstone;
+      align-items: center;
+      padding: 5rem 0;
+      color: $white;
+      font-family: "Oswald", sans-serif;
+      font-size: 4.4rem;
+      font-weight: 400;
+      a {
+        color: $white;
+      }
+      span {
+        font-weight: 300;
+      }
+      #made-by {
+        margin: 1.8rem 0;
+        font-weight: 400;
+        strong {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
+  .list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 35vh;
+    width: 100%;
+  }
+  
+  #list-pizzas,
+  #list-noodles {
+    display: none;
+    ul:last-child {
+      padding-right: 10px;
+    }
   }
 }
+
