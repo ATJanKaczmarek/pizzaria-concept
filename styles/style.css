@@ -42,7 +42,7 @@ body {
 
 section {
   min-height: 100vh;
-  max-width: 100%;
+  width: 100%;
 }
 
 p {
