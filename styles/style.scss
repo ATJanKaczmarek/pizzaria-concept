@@ -92,6 +92,11 @@ p {
 }
 
 button {
+  text-decoration: none;
+  color: $white;
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  font-size: 4vw;
   color: $greyprocelain;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
@@ -176,17 +181,22 @@ button {
       margin: 5rem 15rem 0 15rem;
       width: 50%;
       p {
-        font-size: 3.6rem;
+        font-size: 1.8vw;
         margin: 4.2rem 0 8.5rem 0;
         width: 75%;
       }
-      button {
+      .btn {
+        text-decoration: none;
+        color: $greyprocelain;
+        font-weight: 300;
+        font-family: "Oswald", sans-serif;
+        font-size: 2vw;
         background: $white;
         border: 0.5rem solid $greyprocelain;
         padding: 3.55rem 14.25rem;
         margin-bottom: 10rem;
         transition: transform 0.25s ease-out;
-        width: 75%;
+        width: 40%;
         text-align: center;
         &:hover {
           transform: translateY(-1rem);
@@ -310,6 +320,10 @@ button {
             font-weight: 300;
             font-size: 2.2rem;
             margin-top: 0;
+
+            &:first-child {
+              font-weight: 400;
+            }
           }
           .row {
             display: flex;
@@ -508,17 +522,22 @@ button {
       margin: 5rem 15rem 0 15rem;
       width: 90%;
       p {
-        font-size: 3vw;
+        font-size: 3.9vw;
         margin: 4.2rem 0 8.5rem 0;
         width: 75%;
       }
-      button {
+      .btn {
+        text-decoration: none;
+        color: $greyprocelain;
+        font-weight: 300;
+        font-family: "Oswald", sans-serif;
+        font-size: 4vw;
         background: $white;
         border: 0.5rem solid $greyprocelain;
         padding: 3.55rem 14.25rem;
         margin-bottom: 10rem;
         transition: transform 0.25s ease-out;
-        width: 75%;
+        width: 55%;
         text-align: center;
         &:hover {
           transform: translateY(-1rem);

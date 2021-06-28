@@ -96,6 +96,11 @@ p {
 }
 
 button {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  font-size: 4vw;
   color: #84817a;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
@@ -202,11 +207,16 @@ button:hover {
     width: 50%;
   }
   header .title p {
-    font-size: 3.6rem;
+    font-size: 1.8vw;
     margin: 4.2rem 0 8.5rem 0;
     width: 75%;
   }
-  header .title button {
+  header .title .btn {
+    text-decoration: none;
+    color: #84817a;
+    font-weight: 300;
+    font-family: "Oswald", sans-serif;
+    font-size: 2vw;
     background: #fff;
     border: 0.5rem solid #84817a;
     padding: 3.55rem 14.25rem;
@@ -215,10 +225,10 @@ button:hover {
     transition: -webkit-transform 0.25s ease-out;
     transition: transform 0.25s ease-out;
     transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
-    width: 75%;
+    width: 40%;
     text-align: center;
   }
-  header .title button:hover {
+  header .title .btn:hover {
     -webkit-transform: translateY(-1rem);
             transform: translateY(-1rem);
   }
@@ -370,6 +380,9 @@ button:hover {
     font-weight: 300;
     font-size: 2.2rem;
     margin-top: 0;
+  }
+  main #opening-hours .background-img .content span:first-child {
+    font-weight: 400;
   }
   main #opening-hours .background-img .content .row {
     display: -webkit-box;
@@ -628,11 +641,16 @@ button:hover {
     width: 90%;
   }
   header .title p {
-    font-size: 3vw;
+    font-size: 3.9vw;
     margin: 4.2rem 0 8.5rem 0;
     width: 75%;
   }
-  header .title button {
+  header .title .btn {
+    text-decoration: none;
+    color: #84817a;
+    font-weight: 300;
+    font-family: "Oswald", sans-serif;
+    font-size: 4vw;
     background: #fff;
     border: 0.5rem solid #84817a;
     padding: 3.55rem 14.25rem;
@@ -641,10 +659,10 @@ button:hover {
     transition: -webkit-transform 0.25s ease-out;
     transition: transform 0.25s ease-out;
     transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
-    width: 75%;
+    width: 55%;
     text-align: center;
   }
-  header .title button:hover {
+  header .title .btn:hover {
     -webkit-transform: translateY(-1rem);
             transform: translateY(-1rem);
   }
